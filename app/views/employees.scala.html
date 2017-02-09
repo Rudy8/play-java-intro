@@ -1,0 +1,64 @@
+@(employees: List[Employees])
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type ="text/css" href="@routes.Assets.at("stylesheets/main.css")"/>
+
+</head>
+<body>
+<h1>List of Employees</h1>
+<hr>
+
+<a href="https://www.wisconsincheeseman.com/"
+   target="_blank">
+    <img src ="http://www.relativetaste.net/wp-content/uploads/2014/07/pimento-cheese-005.jpg" /></a>
+<table>
+    <tr>
+
+
+        <th><i>First Name</i></th>
+        <th><i>Last Name</i></th>
+        <th><i>Picture</i></th>
+        <th><i>Title</i></th>
+        <th><i>Address</i></th>
+
+
+
+
+
+    </tr>
+    <hr>
+
+    @for(employee<-employees){
+
+    <tr>
+
+        <td>@employee.firstName</td>
+
+        <td>@employee.lastName</td>
+
+        <td><img src=@{routes.EmployeeController.getPicture(employee.employeeId)}></td>
+
+        <td>@employee.title</td>
+
+        <td>@employee.address</td>
+
+
+
+    </tr>
+    <tfoot>
+
+    <a href="https://www.wisconsincheeseman.com/"
+       target="_blank">
+        <img src ="http://www.relativetaste.net/wp-content/uploads/2014/07/pimento-cheese-005.jpg" /></a>
+    </tfoot>
+    }
+
+</table>
+
+
+
+</body>
+
+

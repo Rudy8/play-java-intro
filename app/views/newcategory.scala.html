@@ -1,0 +1,17 @@
+
+@()
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add New Category</title>
+</head>
+<body>
+<form method="POST" action="@routes.CategoriesController.addCategory()" id="newCategory">
+    <input type="text" name="description"/><br>
+    <button>Add Description</button>
+</form>
+
+</body>
+</html>

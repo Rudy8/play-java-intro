@@ -1,0 +1,32 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
+
+#Categories page
+#GET    /categories                 controllers.CategoriesController.getCategories()
+GET     /categoriesList             controllers.CategoriesController.index()
+GET     /newcategory                controllers.CategoriesController.newCategory()
+POST    /addcategories              controllers.CategoriesController.addCategory()
+GET     /categoryPicture/:id        controllers.CategoriesController.getPicture(id:Long)
+GET     /editCategory/:id           controllers.CategoriesController.editCategory(id:Long)
+POST    /updateCategory/            controllers.CategoriesController.updateCategory
+
+
+#Employees page
+GET     /employees                 controllers.EmployeeController.getEmployees()
+GET     /employeesList             controllers.EmployeeController.index()
+GET     /employeePicture/:id       controllers.EmployeeController.getPicture(id:Long)
+GET     /editemployee/:id          controllers.EmployeeController.editEmployee(id:Long)
+POST    /updateemployee/           controllers.EmployeeController.updateEmployee
+
+
+#Products page
+#GET     /product                    controllers.ProductsController.getProducts()
+#GET     /productList                controllers.ProductsController.index()
+#GET     /newProduct                 controllers.ProductsController.newProduct()
+#POST    /addProduct                 controllers.ProductsController.addProduct()
+#GET     /editProduct/:id            controllers.ProductsController.editProduct(id:Long)
